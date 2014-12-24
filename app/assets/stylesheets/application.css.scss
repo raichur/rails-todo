@@ -2,7 +2,214 @@
  *= require_tree .
  *= require_self
  */
- @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
- * {
-   font-family: Inconsolata;
- }
+
+// Vars //
+$theme: #70BEE0;
+$stheme: #5e747f;
+$back: #151718;
+$text: #cecece;
+$gray: #262B30;
+$dgray: #101112;
+
+// Animations //
+.animated {
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+// Some basic styling //
+* {
+ font-family: Source Code Pro;
+ font-weight: 400;
+ padding: 0;
+ margin: 0;
+ color: $text;
+}
+body{
+  width: 100%;
+  background: $back;
+  margin-top: 30px;
+}
+a {
+  color: $theme;
+  text-decoration: none;
+}
+input, textarea {
+  color: rgba(0,0,0,.8);
+  border: 0;
+  background-color: $gray;
+  text-decoration: none;
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Rows & links //
+.index_row {
+  width: calc(100% - 20px);
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: .5px solid rgba(205,205,205,.06);
+  transition: .3s all ease;
+  &:not(.show):hover {
+    background: $dgray;
+    p {
+      transition: .3s all ease;
+      color: $text;
+    }
+  }
+  h3 {
+    transition: .3s all ease;
+    float: left;
+    font-size: 15px;
+    padding-right: 8px;
+    color: $theme;
+  }
+  p {
+    transition: .3s all ease;
+    float: left;
+    color: $stheme;
+    margin-top: 3px;
+    font-weight: 200;
+    font-size: 11px;
+  }
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+.links {
+  position: fixed;
+  top: 0;
+  display: block;
+  height: 30px;
+  a {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: .3s all ease;
+    &:hover {
+      color: $text;
+    }
+  }
+  width: 100%;
+  background: $gray;
+  margin: 0;
+  padding: 0;
+}
+
+// Forms //
+.forms {
+  width: 100%;
+  form {
+    width: 100%;
+    .field {
+      margin: 0;
+      padding: 0;
+    }
+    .field input {
+      color: $text;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .title input {
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+  }
+  .actions {
+    width: 100%;
+    input {
+      background: $theme;
+      color: $text;
+      height: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+      transition: .3s all ease;
+      &:hover {
+        background: $dgray;
+      }
+    }
+  }
+}
+
+// Todo Show Page //
+.row {
+  .complete {
+    a {
+      padding-left: 10px;
+    }
+    width: 5%;
+    min-width: 40px;
+    float: left;
+    margin-bottom: 10px;
+  }
+  .trash {
+    min-width: 40px;
+    width: 5%;
+    float: left;
+    margin-bottom: 10px;
+  }
+  .todo_item {
+    width: 90%;
+    float: left;
+    max-width: calc(100% - 80px);
+    margin-bottom: 10px;
+  }
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+#todo_item_content {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+}
+.todo_list_title {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.index_row {
+  width: calc(100% - 20px);
+}
