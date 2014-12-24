@@ -2,6 +2,8 @@
 
 A simple TODO List application in Ruby on Rails.
 
+[View it live](http://simplerailstodo.herokuapp.com) on Heroku.
+
 ### Setup:
 
 1. Run `git clone https://github.com/raichur/rails-todo.git`

@@ -54,7 +54,7 @@ $dgray: #101112;
 body{
   width: 100%;
   background: $back;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 a {
   color: $theme;
@@ -74,10 +74,10 @@ input, textarea {
 .index_row {
   width: calc(100% - 20px);
   margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-top: 10px;
   border-bottom: .5px solid rgba(205,205,205,.06);
   transition: .3s all ease;
   &:not(.show):hover {
@@ -90,7 +90,7 @@ input, textarea {
   h3 {
     transition: .3s all ease;
     float: left;
-    font-size: 15px;
+    font-size: 30px;
     padding-right: 8px;
     color: $theme;
   }
@@ -100,7 +100,7 @@ input, textarea {
     color: $stheme;
     margin-top: 3px;
     font-weight: 200;
-    font-size: 11px;
+    font-size: 25px;
   }
   display: block;
   width: 100%;
@@ -110,13 +110,13 @@ input, textarea {
   position: fixed;
   top: 0;
   display: block;
-  height: 30px;
+  height: 50px;
   a {
     display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     transition: .3s all ease;
     &:hover {
       color: $text;
@@ -126,6 +126,7 @@ input, textarea {
   background: $gray;
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 
 // Forms //
@@ -142,13 +143,13 @@ input, textarea {
       display: block;
       width: 100%;
       margin: 0;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
     .title input {
-      font-size: 15px;
+      font-size: 25px;
       text-transform: capitalize;
     }
   }
@@ -158,7 +159,7 @@ input, textarea {
       background: $theme;
       color: $text;
       height: 30px;
-      font-size: 16px;
+      font-size: 26px;
       cursor: pointer;
       margin: 0;
       padding: 0;
@@ -176,7 +177,7 @@ input, textarea {
 .row {
   .complete {
     a {
-      padding-left: 10px;
+      padding-left: 20px;
     }
     width: 5%;
     min-width: 40px;
@@ -203,11 +204,13 @@ input, textarea {
   width: 100%;
   display: block;
   padding: 10px;
+  font-size: 30px;
   position: fixed;
   bottom: 0;
+  color: $text;
 }
 .todo_list_title {
-  font-size: 15px;
+  font-size: 25px;
   text-transform: capitalize;
 }
 .index_row {
